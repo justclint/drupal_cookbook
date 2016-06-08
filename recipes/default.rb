@@ -27,8 +27,8 @@ include_recipe 'drupal::drush'
 
 %w(apps_dir settings_dir sites_dir).each do |dir|
   directory node['drupal'][dir] do
-    owner node['drupal']['user']
-    group node['drupal']['group']
+    owner = node['drupal']['user']
+    group = node['drupal']['group']
     recursive true
   end
 end
